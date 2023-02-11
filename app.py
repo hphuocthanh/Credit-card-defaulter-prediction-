@@ -139,8 +139,8 @@ def main():
     avg_bill_amt = np.mean(BAmt1+BAmt2+BAmt3+BAmt4+BAmt5+BAmt6)
 #     features=[C_Limit,C_sex,C_edu,C_marg,C_age,pay1,pay2,pay3,pay4,pay5,pay6,BAmt1,BAmt2,BAmt3,BAmt4,BAmt5,BAmt6,PAmt1,PAmt2,PAmt3,PAmt4,PAmt5,PAmt6,avg_bill_amt]
     features=[C_Limit,C_age,BAmt1,BAmt2,BAmt3,BAmt4,BAmt5,BAmt6,PAmt1,PAmt2,PAmt3,PAmt4,PAmt5,PAmt6,avg_bill_amt]
-    features_s = scaler.transform(np.array(features,ndmin=2))
-    pred = model.predict(features_s)
+#     features_s = scaler.transform(np.array(features,ndmin=2))
+    pred = model.predict(features)
 
     P_satus=form.form_submit_button("Predict")
     # If predict button clicked it will predict
